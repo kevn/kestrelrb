@@ -66,6 +66,10 @@ module Kestrel
     end
     alias get dequeue
 
+    def peek(raw = false)
+      @kestrel.get(peek_key, raw)
+    end
+
     def abort
       @kestrel.get(abort_key)
     end
@@ -85,6 +89,10 @@ module Kestrel
 
     def plain_key
       @plain_key ||= "#{queue_name}/t=#{timeout}"
+    end
+
+    def peek_key
+      @peek_key ||= "#{queue_name}/peek"
     end
 
     def close_open_key

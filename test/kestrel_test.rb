@@ -27,6 +27,16 @@ class ReliableQueueTest < Test::Unit::TestCase
     assert_equal s, @q.dequeue
   end
 
+  def test_peek
+    assert_equal nil, @q.dequeue
+    s = random_string
+    @q.enqueue(s)
+    assert_equal s, @q.peek
+    assert_equal s, @q.peek
+    assert_equal s, @q.dequeue
+    assert_equal nil, @q.dequeue
+  end
+
   def test_explicit_requeue
     assert_equal nil, @q.get
     s = random_string
