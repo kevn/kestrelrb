@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "kestrelrb"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A Ruby interface to Kestrel queues}
+    gem.description = %Q{Kestrel is a queue server written in Scala that runs on the JVM and has a memcached wire API.}
     gem.email = "kevin@kev.in"
     gem.homepage = "http://github.com/kevn/kestrelrb"
     gem.authors = ["Kevin E. Hunt"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "memcache-client", ">= 1.7.5"
+    # gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
