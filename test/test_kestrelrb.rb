@@ -1,5 +1,5 @@
 require 'rubygems'
-require File.dirname(__FILE__) + '/../lib/kestrel.rb'
+require File.dirname(__FILE__) + '/../lib/kestrelrb.rb'
 require 'test/unit'
 class ReliableQueueTest < Test::Unit::TestCase
   
