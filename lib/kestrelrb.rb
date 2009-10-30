@@ -46,7 +46,7 @@ module Kestrel
           if msg = get
             block.call(msg)
           else
-            sleep SLEEP_DELAY if timeout != 0
+            sleep SLEEP_DELAY if timeout == 0
           end
         rescue Unsubscribe => e
           break
