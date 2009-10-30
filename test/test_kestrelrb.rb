@@ -1,6 +1,4 @@
-require 'rubygems'
-require File.dirname(__FILE__) + '/../lib/kestrelrb.rb'
-require 'test/unit'
+require File.dirname(__FILE__) + '/helper'
 class ReliableQueueTest < Test::Unit::TestCase
   
   QUEUE_NAME = 'test_queue'
